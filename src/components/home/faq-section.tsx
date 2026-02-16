@@ -70,7 +70,7 @@ export function FaqSection() {
                 </div>
 
                 <div className="max-w-4xl mx-auto">
-                    <Accordion type="single" collapsible className="space-y-6">
+                    <Accordion type="single" collapsible className="space-y-6 ">
                         {faqs.map((faq, index) => (
                             <motion.div
                                 key={index}
