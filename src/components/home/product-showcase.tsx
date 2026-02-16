@@ -9,39 +9,39 @@ import { motion } from "framer-motion";
 const products = [
     {
         id: '1',
-        name: 'High-Efficiency Monocrystalline 450W',
+        name: 'Jinko Tiger Neo N-type 475W',
         category: 'Panels',
         price: 18500,
-        specs: 'Bifacial technology, reinforced architectural framing.',
-        image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop',
-        slug: '/offerings/panel-450w-mono'
+        specs: 'High efficiency N-type monocrystalline module with SMBB technology.',
+        image: '/images/s18.jpg',
+        slug: '/offerings/jinko-tiger-neo-475w'
     },
     {
         id: '2',
-        name: 'IVEM6048 Industrial Inverter 6kW',
+        name: 'Growatt SPF 5000 ES 5kW',
         category: 'Inverters',
         price: 85000,
-        specs: 'Pure sine wave, integrated grid-balancing software.',
-        image: 'https://images.unsplash.com/photo-1558449028-b53a39d100fc?q=80&w=800&auto=format&fit=crop',
-        slug: '/offerings/inverter-ivem6048'
+        specs: 'Off-grid inverter 5kW 48V with integrated MPPT charge controller.',
+        image: '/images/i1.jpeg',
+        slug: '/offerings/growatt-spf-5000-es'
     },
     {
         id: '3',
-        name: 'LPBF48200 Lithium Storage Pro',
+        name: 'Felicity 5kWh LiFePO4 Battery',
         category: 'Batteries',
-        price: 145000,
-        specs: '6000 cycles, smart BMS with remote mobile diagnostics.',
-        image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=800&auto=format&fit=crop',
-        slug: '/offerings/battery-lpbf48200'
+        price: 135000,
+        specs: '48V 100Ah Lithium Iron Phosphate battery. 6000 cycles at 80% DOD.',
+        image: '/images/b7.jpg',
+        slug: '/offerings/felicity-lithium-5kwh'
     },
     {
         id: '4',
-        name: 'Full Ecosystem: Urban 5kW Package',
+        name: 'Home Essential 3kW System',
         category: 'Systems',
-        price: 450000,
-        specs: 'Full-spectrum turnkey solution with white-glove install.',
-        image: 'https://images.unsplash.com/photo-1592833159155-c62df1b65634?q=80&w=800&auto=format&fit=crop',
-        slug: '/offerings/system-package-a'
+        price: 350000,
+        specs: 'Complete backup solution with 3kW inverter, 2.5kWh battery, and 4 panels.',
+        image: '/images/system6.jpeg',
+        slug: '/offerings/home-essential-3kw'
     }
 ];
 
@@ -76,7 +76,7 @@ export function ProductShowcase() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                     >
-                        <Button variant="outline" className="h-20 px-12 rounded-full border-white/10 text-white hover:bg-white hover:text-black font-black uppercase tracking-[0.2em] text-[10px] transition-all duration-500 group" asChild>
+                        <Button variant="outline" className="h-20 px-12 rounded-full border-white/10 text-white hover:bg-white hover:text-primary font-black uppercase tracking-[0.2em] text-[10px] transition-all duration-500 group" asChild>
                             <Link href="/offerings">
                                 View Full Archive <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2" />
                             </Link>

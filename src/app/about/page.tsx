@@ -5,6 +5,7 @@ import { MoveDown, Users, Target, Zap, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import InstallingSolar from "../../../public/images/installing-solar.jpg"
 
 export default function AboutPage() {
     return (
@@ -57,7 +58,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div className="relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-[3rem] group">
                         <Image
-                            src="https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?q=80&w=2070&auto=format&fit=crop"
+                            src={InstallingSolar}
                             alt="EastCom Engineering"
                             fill
                             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
@@ -145,10 +146,10 @@ export default function AboutPage() {
                             Join EastCom and lead the sustainable revolution across East Africa.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Button size="lg" className="bg-[#0A0E1A] text-white hover:bg-white hover:text-black font-black uppercase tracking-widest px-10 py-8 rounded-full transition-all duration-500" asChild>
+                            <Button size="lg" className="bg-[#0A0E1A] text-white hover:bg-white/10 hover:backdrop-blur-md border border-white/10 hover:border-white/20 font-black uppercase tracking-widest px-10 py-8 rounded-full transition-all duration-500" asChild>
                                 <Link href="/contact">Get in Touch</Link>
                             </Button>
-                            <Button variant="outline" size="lg" className="border-[#0A0E1A] text-[#0A0E1A] hover:bg-[#0A0E1A] hover:text-white font-black uppercase tracking-widest px-10 py-8 rounded-full transition-all duration-500" asChild>
+                            <Button variant="outline" size="lg" className="border-[#0A0E1A] text-[#0A0E1A] hover:bg-[#0A0E1A]/10 hover:backdrop-blur-md hover:border-[#0A0E1A]/20 font-black uppercase tracking-widest px-10 py-8 rounded-full transition-all duration-500" asChild>
                                 <Link href="/offerings">Our Offerings</Link>
                             </Button>
                         </div>

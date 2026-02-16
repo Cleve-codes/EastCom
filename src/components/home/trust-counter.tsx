@@ -21,7 +21,7 @@ export function TrustCounter() {
             <div className="absolute top-0 right-1/4 w-1 h-full bg-gradient-to-b from-transparent via-primary/10 to-transparent" />
 
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-0 lg:divide-x divide-white/10">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-4 lg:divide-x divide-white/10">
                     {stats.map((stat, index) => (
                         <div key={index} className="flex flex-col items-center lg:items-start justify-center lg:pl-16 first:pl-0">
                             <div className="flex items-baseline gap-1 mb-2">

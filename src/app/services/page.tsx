@@ -5,6 +5,7 @@ import { Zap, ShieldCheck, AreaChart, Settings, Home, Factory, ArrowRight, Check
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import SolarPlant from "../../../public/images/solar-plant.jpg"
 
 const services = [
     {
@@ -19,7 +20,7 @@ const services = [
         title: "Commercial & Industrial",
         description: "Multi-megawatt solutions for factories and office parks. Drastically reduce operational costs and stabilize your power overhead.",
         features: ["Load Balancing", "Industrial Grade Cabinets", "Grid Management", "Tier-1 Panel Arrays"],
-        image: "https://images.unsplash.com/photo-1466611653911-95282fc3656b?q=80&w=2070&auto=format&fit=crop",
+        image: SolarPlant
     },
     {
         icon: AreaChart,

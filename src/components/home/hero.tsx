@@ -66,7 +66,7 @@ export function Hero() {
                 </motion.div>
 
                 {/* High-Impact Headline */}
-                <h1 className="font-display text-[12vw] sm:text-7xl md:text-8xl lg:text-[9.5rem] font-black tracking-tighter text-white leading-[0.85] mb-12 max-w-6xl">
+                <h1 className="font-display text-[10vw] sm:text-7xl md:text-8xl lg:text-[7.5rem] font-black tracking-tighter text-white leading-[0.85] mb-12 max-w-6xl">
                     {titleWords.map((word, i) => (
                         <motion.span
                             key={i}

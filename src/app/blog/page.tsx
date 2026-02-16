@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function BlogComingSoonPage() {
     return (
-        <main className="min-h-screen bg-[#0A0E1A] flex items-center justify-center relative overflow-hidden px-6">
+        <main className="pt-28 min-h-screen bg-[#0A0E1A] flex items-center justify-center relative overflow-hidden px-6">
             {/* Dynamic Background */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] bg-primary/5 blur-[180px] rounded-full animate-slow-pulse" />
 

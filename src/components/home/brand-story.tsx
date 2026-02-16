@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Factory, ShieldCheck, Zap } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import SolarPlant from "../../../public/images/solar-plant.jpg"
+import Solar from "../../../public/images/installing-solar.jpg"
 
 const features = [
     { text: "EPRA Certified Engineers", icon: ShieldCheck },
@@ -38,10 +40,10 @@ export function BrandStory() {
                             className="relative z-20 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl aspect-[4/5]"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1548516173-3cabfa4607e9?q=80&w=2070&auto=format&fit=crop"
+                                src={SolarPlant}
                                 alt="Advanced Solar Engineering"
                                 fill
-                                className="object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-1000 scale-110"
+                                className="object-cover grayscale-[0.8] hover:grayscale-0 transition-all duration-1000 scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E1A] via-transparent to-transparent opacity-60" />
 
@@ -61,7 +63,7 @@ export function BrandStory() {
                             className="absolute -bottom-12 -right-12 w-1/2 aspect-square rounded-[2rem] overflow-hidden border-8 border-[#0A0E1A] z-30 shadow-2xl"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?q=80&w=2070&auto=format&fit=crop"
+                                src={Solar}
                                 alt="Construction Focus"
                                 fill
                                 className="object-cover"

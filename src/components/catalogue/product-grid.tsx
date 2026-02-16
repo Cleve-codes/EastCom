@@ -28,7 +28,7 @@ export function ProductGrid({ products }: { products: Product[] }) {
                     name={p.name}
                     category={p.category}
                     price={p.price}
-                    image={p.images[0] || 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800'}
+                    image={p.images[0] || '/images/s18.jpg'}
                     slug={`/offerings/${p.slug}`}
                     specs={formatSpecs(p.specs)}
                 />
