@@ -9,6 +9,18 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'africa.felicitysolar.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'africa.felicitysolar.com',
+        port: '',
+        pathname: '/wp-content/**',
+      },
     ],
   },
 };

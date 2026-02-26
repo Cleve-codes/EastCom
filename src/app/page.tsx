@@ -7,14 +7,17 @@ import { WhySolar } from "@/components/home/why-solar";
 import { Testimonials } from "@/components/home/testimonials";
 import { FaqSection } from "@/components/home/faq-section";
 import { CTASection } from "@/components/home/cta-section";
+import { getHomepageProducts } from "@/lib/actions";
 
-export default function Home() {
+export default async function Home() {
+  const products = await getHomepageProducts();
+
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
       <TrustCounter />
       <BrandStory />
-      <ProductShowcase />
+      <ProductShowcase products={products} />
       <ServicesGrid />
       <WhySolar />
       <Testimonials />

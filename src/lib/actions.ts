@@ -8,13 +8,17 @@ export async function getProducts({
     search,
     sort,
     minPrice,
-    maxPrice
+    maxPrice,
+    page = 1,
+    pageSize = 15
 }: {
     category?: string
     search?: string
     sort?: string
     minPrice?: number
     maxPrice?: number
+    page?: number
+    pageSize?: number
 }) {
     const where: any = {}
 
@@ -45,15 +49,18 @@ export async function getProducts({
     if (sort === 'newest') orderBy = { createdAt: 'desc' }
 
     try {
+        const total = await prisma.product.count({ where })
         const products = await prisma.product.findMany({
             where,
             orderBy,
+            skip: (Math.max(1, page) - 1) * pageSize,
+            take: pageSize
         })
-        return products
+        return { products, total }
     } catch (error) {
         console.error('Error fetching products:', error)
-        // Return empty array on error to avoid crashing UI
-        return []
+        // Return empty results on error to avoid crashing UI
+        return { products: [], total: 0 }
     }
 }
 
@@ -80,5 +87,39 @@ export async function getFeaturedProducts() {
     } catch (error) {
         console.error('Error fetching featured products:', error)
         return []
+    }
+}
+export async function getHomepageProducts() {
+    try {
+        const categories = Object.values(Category);
+        // Get one product from each category first
+        const productsByCategory = await Promise.all(
+            categories.map(async (category) => {
+                return prisma.product.findFirst({
+                    where: { category },
+                    orderBy: { createdAt: 'desc' }
+                });
+            })
+        );
+
+        const categoryProducts = productsByCategory.filter((p): p is NonNullable<typeof p> => p !== null);
+
+        // If we have less than 4 products, fetch additional products to reach 4
+        if (categoryProducts.length < 4) {
+            const existingIds = categoryProducts.map(p => p.id);
+            const additionalProducts = await prisma.product.findMany({
+                where: {
+                    id: { notIn: existingIds }
+                },
+                orderBy: { createdAt: 'desc' },
+                take: 4 - categoryProducts.length
+            });
+            return [...categoryProducts, ...additionalProducts];
+        }
+
+        return categoryProducts.slice(0, 4);
+    } catch (error) {
+        console.error('Error fetching homepage products:', error);
+        return [];
     }
 }
